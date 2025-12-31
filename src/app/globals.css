@@ -3,123 +3,422 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+ * Neothink Institute - Premium Academic Design System
+ * Established 1968 | 50+ Years of Research
+ *
+ * Color Philosophy:
+ * - Dark foundation (ink/charcoal) for intellectual gravitas
+ * - Gold accents for prestige and achievement
+ * - Teal highlights for trust and forward-thinking
+ * - Typography: Classical serif meets modern sans-serif
+ */
+
 @theme inline {
+  /* Brand Colors */
+  --color-ink: #0d1117;
+  --color-charcoal: #1c2128;
+  --color-slate: #2d333b;
+  --color-stone: #484f58;
+  --color-silver: #8b949e;
+  --color-pearl: #c9d1d9;
+  --color-ivory: #f0f3f6;
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a849;
+  --color-gold-dark: #8b6914;
+  --color-teal: #1a6b6b;
+  --color-teal-light: #2d9494;
+  --color-teal-dark: #0d4f4f;
+
+  /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Typography */
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-source-sans);
+
+  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Spacing Scale - Academic Typography */
+  --spacing-section: 6rem;
+  --spacing-content: 4rem;
+  --spacing-element: 2rem;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.5rem;
+
+  /* Light Mode - Premium Academic */
+  --background: #ffffff;
+  --foreground: #0d1117;
+  --card: #ffffff;
+  --card-foreground: #0d1117;
+  --popover: #ffffff;
+  --popover-foreground: #0d1117;
+  --primary: #0d1117;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f3f6;
+  --secondary-foreground: #0d1117;
+  --muted: #f0f3f6;
+  --muted-foreground: #484f58;
+  --accent: #b8860b;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --border: #c9d1d9;
+  --input: #c9d1d9;
+  --ring: #b8860b;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Dark Mode - Premium Academic */
+  --background: #0d1117;
+  --foreground: #f0f3f6;
+  --card: #1c2128;
+  --card-foreground: #f0f3f6;
+  --popover: #1c2128;
+  --popover-foreground: #f0f3f6;
+  --primary: #f0f3f6;
+  --primary-foreground: #0d1117;
+  --secondary: #2d333b;
+  --secondary-foreground: #f0f3f6;
+  --muted: #2d333b;
+  --muted-foreground: #8b949e;
+  --accent: #d4a849;
+  --accent-foreground: #0d1117;
+  --destructive: #ef4444;
+  --border: #484f58;
+  --input: #484f58;
+  --ring: #d4a849;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Premium Academic Typography Scale */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p, li, span {
+    font-family: var(--font-body);
+  }
+
+  /* Gold Link Underlines */
+  a:not([class]) {
+    @apply text-gold hover:text-gold-light transition-colors;
+    text-decoration-color: currentColor;
+    text-underline-offset: 4px;
+  }
+
+  /* Selection Styling */
+  ::selection {
+    @apply bg-gold/20 text-foreground;
+  }
+}
+
+@layer components {
+  /* Premium Section Containers */
+  .section-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Authority/Stats Bar */
+  .authority-stat {
+    @apply text-center;
+  }
+
+  .authority-stat-number {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold;
+    letter-spacing: -0.02em;
+  }
+
+  .authority-stat-label {
+    @apply text-sm md:text-base uppercase tracking-widest text-pearl mt-2;
+    letter-spacing: 0.15em;
+  }
+
+  /* Premium Card Styles */
+  .premium-card {
+    @apply bg-card border border-border rounded-lg p-6 md:p-8;
+    @apply transition-all duration-300;
+    @apply hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5;
+  }
+
+  /* Gold Accent Elements */
+  .gold-accent {
+    @apply text-gold;
+  }
+
+  .gold-border {
+    @apply border-gold;
+  }
+
+  .gold-bg {
+    @apply bg-gold text-white;
+  }
+
+  /* Teal Accent Elements */
+  .teal-accent {
+    @apply text-teal;
+  }
+
+  .teal-border {
+    @apply border-teal;
+  }
+
+  .teal-bg {
+    @apply bg-teal text-white;
+  }
+
+  /* Premium Buttons */
+  .btn-premium-gold {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-6 py-3 md:px-8 md:py-4;
+    @apply font-medium tracking-wide;
+    @apply rounded-lg transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply bg-gold text-white;
+    @apply hover:bg-gold-light;
+    @apply focus:ring-gold;
+  }
+
+  .btn-premium-outline {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply px-6 py-3 md:px-8 md:py-4;
+    @apply font-medium tracking-wide;
+    @apply rounded-lg transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply border-2 border-current bg-transparent;
+    @apply hover:bg-current/10;
+  }
+
+  /* Timeline Styles */
+  .timeline-item {
+    @apply relative pl-8 md:pl-12;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-0 top-2 w-3 h-3 rounded-full bg-gold;
+  }
+
+  .timeline-item::after {
+    content: '';
+    @apply absolute left-[5px] top-5 w-0.5 h-full bg-gold/30;
+  }
+
+  .timeline-item:last-child::after {
+    @apply hidden;
+  }
+
+  /* Blog Post Card - use with 'group' class in HTML for hover effects */
+  .blog-card {
+    @apply bg-card border border-border rounded-lg;
+    @apply transition-all duration-300;
+    @apply hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5;
+    @apply overflow-hidden;
+  }
+
+  .blog-card-image {
+    @apply aspect-video w-full object-cover;
+    @apply transition-transform duration-500;
+    @apply group-hover:scale-105;
+  }
+
+  /* Form Styles */
+  .form-input {
+    @apply w-full px-4 py-3;
+    @apply bg-background border border-border rounded-lg;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply focus:border-gold focus:ring-2 focus:ring-gold/20;
+    @apply transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-foreground mb-2;
+  }
+
+  /* FAQ Accordion */
+  .faq-item {
+    @apply border-b border-border py-6;
+  }
+
+  .faq-question {
+    @apply text-lg font-display font-semibold text-foreground;
+    @apply flex items-center justify-between cursor-pointer;
+  }
+
+  .faq-answer {
+    @apply mt-4 text-muted-foreground leading-relaxed;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-sm font-medium tracking-wide uppercase;
+    @apply text-foreground/80 hover:text-gold;
+    @apply transition-colors duration-200;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-link-active {
+    @apply text-gold;
+  }
+
+  /* Footer */
+  .footer-heading {
+    @apply text-gold uppercase tracking-widest text-sm font-semibold mb-6;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-link {
+    @apply text-pearl/70 hover:text-gold transition-colors;
+  }
+
+  /* Decorative Elements */
+  .divider-gold {
+    @apply w-24 h-1 bg-gradient-to-r from-gold to-gold-light mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold;
+    @apply bg-clip-text text-transparent;
+  }
+
+  /* Pattern Background */
+  .pattern-dots {
+    background-image: radial-gradient(circle, var(--color-gold) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+  }
+}
+
+@layer utilities {
+  /* Premium spacing utilities */
+  .space-section {
+    @apply my-16 md:my-24 lg:my-32;
+  }
+
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Preserve 3D for animations */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Academic underline */
+  .underline-gold {
+    text-decoration: underline;
+    text-decoration-color: #b8860b;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+
+  /* Subtle glow effects */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+  }
+
+  .glow-gold-strong {
+    box-shadow: 0 0 40px rgba(184, 134, 11, 0.25);
+  }
+}
+
+/* Custom Scrollbar */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stone rounded-full;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }
