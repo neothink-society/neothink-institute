@@ -23,9 +23,9 @@
   --color-silver: #8b949e;
   --color-pearl: #c9d1d9;
   --color-ivory: #f0f3f6;
-  --color-gold: #b8860b;
-  --color-gold-light: #d4a849;
-  --color-gold-dark: #8b6914;
+  --color-gold: #FFD700;
+  --color-gold-light: #FFED4E;
+  --color-gold-dark: #D4AF37;
   --color-teal: #1a6b6b;
   --color-teal-light: #2d9494;
   --color-teal-dark: #0d4f4f;
@@ -51,8 +51,9 @@
   --color-ring: var(--ring);
 
   /* Typography */
-  --font-display: var(--font-cormorant);
-  --font-body: var(--font-source-sans);
+  --font-display: var(--font-baskervville);
+  --font-body: var(--font-plus-jakarta);
+  --font-mono: var(--font-courier-prime);
 
   /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
@@ -84,12 +85,12 @@
   --secondary-foreground: #0d1117;
   --muted: #f0f3f6;
   --muted-foreground: #484f58;
-  --accent: #b8860b;
-  --accent-foreground: #ffffff;
+  --accent: #FFD700;
+  --accent-foreground: #000000;
   --destructive: #dc2626;
   --border: #c9d1d9;
   --input: #c9d1d9;
-  --ring: #b8860b;
+  --ring: #FFD700;
 }
 
 .dark {
@@ -106,12 +107,12 @@
   --secondary-foreground: #f0f3f6;
   --muted: #2d333b;
   --muted-foreground: #8b949e;
-  --accent: #d4a849;
-  --accent-foreground: #0d1117;
+  --accent: #FFD700;
+  --accent-foreground: #000000;
   --destructive: #ef4444;
   --border: #484f58;
   --input: #484f58;
-  --ring: #d4a849;
+  --ring: #FFD700;
 }
 
 @layer base {
@@ -371,18 +372,18 @@
   /* Academic underline */
   .underline-gold {
     text-decoration: underline;
-    text-decoration-color: #b8860b;
+    text-decoration-color: #FFD700;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
   }
 
   /* Subtle glow effects */
   .glow-gold {
-    box-shadow: 0 0 20px rgba(184, 134, 11, 0.15);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
   }
 
   .glow-gold-strong {
-    box-shadow: 0 0 40px rgba(184, 134, 11, 0.25);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
   }
 }
 

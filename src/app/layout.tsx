@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import { Baskervville, Plus_Jakarta_Sans, Courier_Prime } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Header, Footer } from "@/components/layout";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const baskervville = Baskervville({
+  variable: "--font-baskervville",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const courierPrime = Courier_Prime({
+  variable: "--font-courier-prime",
+  subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -226,7 +234,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${cormorant.variable} ${sourceSans.variable} antialiased min-h-screen flex flex-col font-body`}
+        className={`${baskervville.variable} ${plusJakarta.variable} ${courierPrime.variable} antialiased min-h-screen flex flex-col font-body`}
       >
         <ThemeProvider
           attribute="class"
