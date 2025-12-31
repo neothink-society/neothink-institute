@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write", 
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git status:*)",
+      "Bash(git branch:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(vercel:*)",
+      "Bash(tsc:*)",
+      "Bash(eslint:*)",
+      "Bash(prettier:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "WebFetch",
+      "WebSearch",
+      "mcp__github__*",
+      "mcp__shadcn__*"
+    ],
+    "deny": []
+  }
+}
